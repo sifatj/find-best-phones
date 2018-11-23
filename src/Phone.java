@@ -8,7 +8,7 @@ public class Phone {
 		// by throwing an IllegalArgumentException otherwise
 
 		if (screenSize <= 0 || batteryCapacity <= 0) {
-			throw new IllegalArgumentException("The number is negative");
+			throw new IllegalArgumentException("A parameter value is negative, this cannot be the case! batteryCapacity = " + batteryCapacity + ", screenSize = " +screenSize);
 		}
 
 		this.model = model;
@@ -42,6 +42,7 @@ public class Phone {
 	 * is better in one criterion, and at least as good in the other criterion.
 	 */
 	public boolean dominates(Phone other) {
-		return ((this.getScreenSize() > other.getScreenSize() && this.getBatteryCapacity() >= other.getBatteryCapacity()) || (this.getBatteryCapacity() > other.getBatteryCapacity() && this.getScreenSize() >= other.getScreenSize()));
+		return ((this.getScreenSize() > other.getScreenSize() && this.getBatteryCapacity() >= other.getBatteryCapacity()) 
+				|| (this.getBatteryCapacity() > other.getBatteryCapacity() && this.getScreenSize() >= other.getScreenSize()));
 	}
 }

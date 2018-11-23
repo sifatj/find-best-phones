@@ -14,7 +14,7 @@ public class FindBestPhones {
 			}
 		} catch (IOException ex) {
 			// handle I/O failures by printing an error message
-			System.out.println("ERROR Phone list not found: " + PHONES_FILE);
+			System.out.println("Error Phone list not found: " + PHONES_FILE);
 		}
 	}
 }
